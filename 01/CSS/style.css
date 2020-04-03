@@ -5,39 +5,129 @@
     box-sizing: border-box;
 }
 
+
+
 .banner {
     height: 100vh;
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
     background: url(../Images/front-page.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    padding: 0;
-}
-
-.banner h1 {
-    font-family: 'Satisfy', cursive;
-    font-size: 60px;
-    color: #44790E;
-    background-color: #92B27C;
-    padding: 15px;
-    border-radius: 15px;
 }
 
 .logo {
-    color: #44790E;
-    font-size: 22px;
+    overflow: hidden;
+    text-overflow:clip;
+}
+
+.logo img {
+    border-radius: 30px;
+    padding: 10px;
+    width: 110px;
+}
+
+.front-page-logo img {
+    border-radius: 50px;
+    padding: 10px;
+    width: 250px;
 }
 
 nav {
+    height: 110px;
+    background: #92B27C;
+    width: 100%;
+    margin: 0;
+    position: fixed;
+    font-family: 'Satisfy', cursive;
+    font-size: 20px;
     display: flex;
+    justify-content: space-between;
+    padding: 0 16px 0 0;
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
     justify-content: space-around;
     align-items: center;
-    min-height: 8vh;
-    font-family: 'Satisfy', cursive;
-    background: #0B1905;
+    height: 100%;
+    margin: 0;
+}
+
+.nav-links a {
+    color: #0A1E05;
+    text-decoration: none;
+    margin: 16px;
+    transition: 0.4s;
+}
+
+.nav-links a:hover {
+    color: rgb(37, 109, 19);
+}
+
+.work-examples {
+    background: #598815;
+    align-items: center;
+    justify-content: center;
+}
+
+.work-examples h2 {
+    margin-top: 40px;
+    color: #92B27C;
+    font-size: 32px;
+    font-family: "Satisfy", cursive;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    transition: all 0.4s;
+    display: inline-block;
+    padding: 4px 32px;
+}
+
+.see-all {
+    padding: 8px 24px;
+    border: 3px solid black;
+    transition: 0.4s;
+    display: inline-block;
+    margin-bottom: 24px;
+    margin-left: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #598815;
+}
+
+.slider{
+    width: 500px;
+    height: 375px;
+    background: url(../Images/lawn01.jpg);
+    margin: 50px auto;
+    background-size: cover;
+    background-position: center;
+    animation: slide 24s infinite;
+}
+
+@keyframes slide {
+    16% {
+        background: url(../Images/lawn02.jpg);
+    }
+    32% {
+        background: url(../Images/lawn03.jpg);
+    }
+    48% {
+        background: url(../Images/lawn04.jpg);
+    }
+    64% {
+        background: url(../Images/lawn05.jpg);
+    }
+    80% {
+        background: url(../Images/lawn06.jpg);
+    }
+    100% {
+        background: url(../Images/lawn01.jpg);
+    }
 }
