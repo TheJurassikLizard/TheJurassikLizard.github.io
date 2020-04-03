@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+.banner {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: url(../Images/front-page.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 0;
+}
+
+.banner h1 {
+    font-family: 'Satisfy', cursive;
+    font-size: 60px;
+    color: #44790E;
+    background-color: #92B27C;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.logo {
+    color: #44790E;
+    font-size: 22px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    font-family: 'Satisfy', cursive;
+    background: #0B1905;
+}
