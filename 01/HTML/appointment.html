@@ -46,19 +46,29 @@
         </div>
         <div>
             <label for="date">Date Of Appointment</label>
-            <input type="date" name="date" id="date" min="2020-04-3">
+            <input type="date" name="date" id="date">
         </div>
         <button type="submit">Submit</button>
     </form>
 
     <script>
+        
         const urlParams = new URLSearchParams(window.location.search);
         const first_name = urlParams.get("first_name")
         const last_name = urlParams.get("last_name")
         const address = urlParams.get("address")
         const date = urlParams.get("date")
 
-        alert("Appointment at: " + date + ". At address: " + address + ". With: " + first_name + " " + last_name + ".");
+        var anything = new Date().toLocaleDateString().split("/");
+        if(anything[0].length==1) anything[0] = "0"+anything
+        if(anything[1].length==1) anything[1] = "0"+anything
+
+        var output = anything[2]+"-"+anything[0]+"-"+anything[1];
+
+        if(first_name != null) {
+            alert("Appointment at: " + date + ", At address: " + address + ", With: " + first_name + " " + last_name + ".");
+        }
+
     </script>
 
 </body>
