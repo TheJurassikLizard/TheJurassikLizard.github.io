@@ -30,14 +30,36 @@
         
         </ul>
     </nav>
-        
-        <h1>Schedule An Appointment</h1>
+          
+    <form action="appointment.html" method="GET">
+        <div>
+            <label for="first_name">First Name</label>
+            <input type="text" name="first_name" id="first_name" required>
+        </div>
+        <div>
+            <label for="last_name">Last Name</label>
+            <input type="text" name="last_name" id="last_name" required>
+        </div>
+        <div>
+            <label for="address">Address</label>
+            <input type="text" name="address" id="address">
+        </div>
+        <div>
+            <label for="date">Date Of Appointment</label>
+            <input type="date" name="date" id="date" min="2020-04-3">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
 
-    <section>Triple-Section</section>
-    
-    <section>Lower -Section</section>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const first_name = urlParams.get("first_name")
+        const last_name = urlParams.get("last_name")
+        const address = urlParams.get("address")
+        const date = urlParams.get("date")
 
-    <footer>Footer</footer>
+        alert("Appointment at: " + date + ". At address: " + address + ". With: " + first_name + " " + last_name + ".");
+    </script>
 
 </body>
 </html>

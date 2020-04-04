@@ -131,3 +131,31 @@ nav ul {
         background: url(../Images/lawn01.jpg);
     }
 }
+
+.dif-locations {
+    font-family: "Satisfy", cursive;
+    background: #598815;
+    color: #0A1E05;
+    align-items: center;
+    padding-left: 60px;
+}
+
+.forms {
+    font-family: "Satisfy", cursive;
+    background: #598815;
+    color: #0A1E05;
+    align-items: center;
+    padding-left: 60px;
+    height: 1000px;
+}
+
+form {
+    font-family: "Satisfy", cursive;
+    background: #598815;
+    color: #0A1E05;
+    align-items: center;
+    text-align: center;
+    padding-top: 20vh;
+    height: 100vh;
+    display: flexbox;
+}
